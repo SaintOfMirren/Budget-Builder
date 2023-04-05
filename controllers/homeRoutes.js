@@ -1,14 +1,19 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { User, Expense } = require('../models');
 const withAuth = require('../utils/auth');
 
+
+//Render the main homepage when the user is not logged in
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-
-    // Serialize data so the template can read it
-
-    // Pass serialized data and session flag into template
+    const budgetData = await Budget.findAll({
+      include: [
+        {
+          model: User,
+          attributes: id,
+        },
+      ],
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -17,10 +22,10 @@ router.get('/', async (req, res) => {
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
+    // Find the logged in user based on the session ID but exclude the password field
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: Expense }],
     });
 
     const user = userData.get({ plain: true });

@@ -11,3 +11,4 @@ Expense.belongsTo(User, {
 });
 
 module.exports = { User, Expense };
+
