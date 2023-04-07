@@ -6,14 +6,7 @@ const withAuth = require('../utils/auth');
 //Render the main homepage when the user is not logged in
 router.get('/', async (req, res) => {
   try {
-    const budgetData = await Budget.findAll({
-      include: [
-        {
-          model: User,
-          attributes: id,
-        },
-      ],
-    });
+    res.render('homepage');
   } catch (err) {
     res.status(500).json(err);
   }
