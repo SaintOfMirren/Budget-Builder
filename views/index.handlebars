@@ -1,0 +1,130 @@
+<form action="/submitBudget" method="POST" id="budget">
+    <div class="budget-section" id="budget--income">
+        <h3><div>Income</div><button>+</button></h3>
+        <div class="budget-section--content hidden">
+            <div class="budget-section--input">
+                <span>Main income</span>
+                <input type="text" name="incomeMain">
+            </div>
+            <div class="budget-section--input">
+                <span>Other income</span>
+                <input type="text" name="incomeOther">
+            </div>
+        </div>
+    </div>
+    <div class="budget-section" id="budget--household">
+        <h3><div>Household</div><button>+</button></h3>
+        <div class="budget-section--content hidden">
+            <div class="budget-section--input">
+                <span>Food</span>
+                <input type="text" name="householdFood">
+            </div>
+            <div class="budget-section--input">
+                <span>Furniture</span>
+                <input type="text" name="householdFurniture">
+            </div>
+            <div class="budget-section--input">
+                <span>Child Care</span>
+                <input type="text" name="child--care">
+            </div>
+            <div class="budget-section--input">
+                <span>Property Taxes</span>
+                <input type="text" name="propertyTaxes">
+            </div>
+            <div class="budget-section--input">
+                <span>Utilities</span>
+                <input type="text" name="utilities">
+            </div>
+            <div class="budget-section--input">
+                <span>Other Expenses</span>
+                <input type="text" name="otherExpenses">
+            </div>
+        </div>
+    </div>
+    <div class="budget-section" id="budget--health">
+        <h3><div>Health</div><button>+</button></h3>
+        <div class="budget-section--content hidden">
+            <div class="budget-section--input">
+                <span>Health Insurance</span>
+                <input type="text" name="healthInsurance">
+            </div>
+            <div class="budget-section--input">
+                <span>Medication</span>
+                <input type="text" name="healthMedication">
+            </div>
+            <div class="budget-section--input">
+                <span>Other Expenses</span>
+                <input type="text" name="otherExpenses">
+            </div>
+        </div>
+    </div>
+    <div class="budget-section" id="budget--education">
+        <h3><div>Education</div><button>+</button></h3>
+        <div class="budget-section--content hidden">
+            <div class="budget-section--input">
+                <span>Tuition and Fees</span>
+                <input type="text" name="tuitionAndFees">
+            </div>
+            <div class="budget-section--input">
+                <span>Textbooks</span>
+                <input type="text" name="textbooks">
+            </div>
+            <div class="budget-section--input">
+                <span>Supplies and Other Expenses</span>
+                <input type="text" name="otherExpenses">
+            </div>
+        </div>
+    </div>
+    <div class="budget-section" id="budget--savings">
+        <h3><div>Savings and Giving</div><button>+</button></h3>
+        <div class="budget-section--content hidden">
+            <div class="budget-section--input">
+                <span>My Savings</span>
+                <input type="text" name="savings">
+            </div>
+        </div>
+    </div>
+    <div class="budget-section" id="budget--miscellaneous">
+        <h3><div>Miscellaneous Expenses</div><button>+</button></h3>
+        <div class="budget-section--content hidden">
+            <div class="budget-section--input">
+                <span>Entertainment</span>
+                <input type="text" name="entertainment">
+            </div>
+            <div class="budget-section--input">
+                <span>Travel</span>
+                <input type="text" name="travel">
+            </div>
+            <div class="budget-section--input">
+                <span>Clothing</span>
+                <input type="text" name="clothing">
+            </div>
+            <div class="budget-section--input">
+                <span>Personal Care</span>
+                <input type="text" name="personalCare">
+            </div>
+            <div class="budget-section--input">
+                <span>Impromptu</span>
+                <input type="text" name="impromptu">
+            </div>
+            <div class="budget-section--input">
+                <span>Other Expenses</span>
+                <input type="text" name="otherExpenses">
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+
+    const plusBtns = document.querySelectorAll('.budget-section h3 button')
+    const sectionContentElements = document.querySelectorAll('.budget-section--content')
+
+    plusBtns.forEach((btn, btnIndex) => {
+        btn.addEventListener('click', e => {
+            e.preventDefault()
+            sectionContentElements[btnIndex].classList.toggle('hidden')
+        })
+    })
+
+</script>
