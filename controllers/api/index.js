@@ -3,6 +3,6 @@ const userRoutes = require('./userRoutes');
 const expenseRoutes = require('./expenseRoutes');
 
 router.use('/users', userRoutes);
-router.use('/api', expenseRoutes);
+router.use('/expense', expenseRoutes);
 
 module.exports = router;
