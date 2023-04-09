@@ -1,3 +1,5 @@
+TEST TEST TEST
+
 <form action="/submitBudget" method="POST" id="budget">
     <div class="budget-section" id="budget--income">
         <h3><div>Income</div><button>+</button></h3>
@@ -25,19 +27,19 @@
             </div>
             <div class="budget-section--input">
                 <span>Child Care</span>
-                <input type="text" name="child--care">
+                <input type="text" name="householdChildcare">
             </div>
             <div class="budget-section--input">
                 <span>Property Taxes</span>
-                <input type="text" name="propertyTaxes">
+                <input type="text" name="householdPropertyTaxes">
             </div>
             <div class="budget-section--input">
                 <span>Utilities</span>
-                <input type="text" name="utilities">
+                <input type="text" name="householdUtilities">
             </div>
             <div class="budget-section--input">
                 <span>Other Expenses</span>
-                <input type="text" name="otherExpenses">
+                <input type="text" name="householdOther">
             </div>
         </div>
     </div>
@@ -54,7 +56,7 @@
             </div>
             <div class="budget-section--input">
                 <span>Other Expenses</span>
-                <input type="text" name="otherExpenses">
+                <input type="text" name="healthOther">
             </div>
         </div>
     </div>
@@ -63,15 +65,15 @@
         <div class="budget-section--content hidden">
             <div class="budget-section--input">
                 <span>Tuition and Fees</span>
-                <input type="text" name="tuitionAndFees">
+                <input type="text" name="educationTuition">
             </div>
             <div class="budget-section--input">
                 <span>Textbooks</span>
-                <input type="text" name="textbooks">
+                <input type="text" name="educationTextbooks">
             </div>
             <div class="budget-section--input">
                 <span>Supplies and Other Expenses</span>
-                <input type="text" name="otherExpenses">
+                <input type="text" name="educationOther">
             </div>
         </div>
     </div>
@@ -89,42 +91,34 @@
         <div class="budget-section--content hidden">
             <div class="budget-section--input">
                 <span>Entertainment</span>
-                <input type="text" name="entertainment">
+                <input type="text" name="miscEntertainment">
             </div>
             <div class="budget-section--input">
                 <span>Travel</span>
-                <input type="text" name="travel">
+                <input type="text" name="miscTravel">
             </div>
             <div class="budget-section--input">
                 <span>Clothing</span>
-                <input type="text" name="clothing">
+                <input type="text" name="miscClothing">
             </div>
             <div class="budget-section--input">
                 <span>Personal Care</span>
-                <input type="text" name="personalCare">
+                <input type="text" name="miscPersonal">
             </div>
             <div class="budget-section--input">
                 <span>Impromptu</span>
-                <input type="text" name="impromptu">
+                <input type="text" name="misImpromptu">
             </div>
             <div class="budget-section--input">
                 <span>Other Expenses</span>
-                <input type="text" name="otherExpenses">
+                <input type="text" name="miscOther">
             </div>
         </div>
     </div>
+    asdlkjfalksdjfkaldsfj
+    <button id="calcBtn">
+        Calculate Results
+    </button>
 </form>
 
-<script>
-
-    const plusBtns = document.querySelectorAll('.budget-section h3 button')
-    const sectionContentElements = document.querySelectorAll('.budget-section--content')
-
-    plusBtns.forEach((btn, btnIndex) => {
-        btn.addEventListener('click', e => {
-            e.preventDefault()
-            sectionContentElements[btnIndex].classList.toggle('hidden')
-        })
-    })
-
-</script>
+<script src="js/home.js"></script>

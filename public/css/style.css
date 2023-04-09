@@ -76,4 +76,72 @@ header {
 
 .hidden {
   display: none;
+  transition-duration: 1s;
+  transition-delay: 0.3s;
+}
+
+.second-section{
+  display: flex;
+  flex-direction: column;
+  min-height: 40vh;
+  height: auto;
+  width: 100%;
+  border: 1px solid black;
+  align-items: flex-end;
+}
+
+.row1{
+  display: flex;
+
+}
+
+.row1 > div{
+  padding-top: 20px;
+  margin-left: 20px;
+  padding-right: 20px;
+
+}
+
+.row1 button{
+  background-color: rgb(79, 78, 78);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+.row1 button:hover{
+  background-color: slateblue;
+  padding: 10px 20px;
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+}
+
+
+.row2{
+  display: flex;
+  
+}
+
+.mini-Row{
+  width: 400px;
+  
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+}
+
+
+.container-col{
+  
+  display: flex;
+  flex-direction: column;
+}
+
+
+.color-block-blue{
+  background-color: blue;
+  display: inline-block;
+  width: 20px;
+  height: 10px;
 }
