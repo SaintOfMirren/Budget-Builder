@@ -1,8 +1,8 @@
 <!-- Loop over each object in the projects array -->
 {{!-- {{#each users as |user| }} --}}
 {{!-- // action="/submitBudget" method="POST" --}}
-<form action="/submitBudget" method="POST" id="budget">
-    <div class="budget-section" id="budget--income">
+<form action="/expense" method="POST" id="budget">
+    {{!-- <div class="budget-section" id="budget--income">
         <h3>
             <div>Income</div><button>+</button>
         </h3>
@@ -48,25 +48,30 @@
             </div>
         </div>
     </div>
-    <div class="budget-section" id="budget--health">
+    --}}
+    <div class="budget-section">
         <h3>
-            <div>Health</div><button>+</button>
+            <div>Expense Entry</div><button>+</button>
         </h3>
         <div class="budget-section--content hidden">
             <div class="budget-section--input">
-                <span>Health Insurance</span>
-                <input type="text" name="healthInsurance">
+                <span>Amount</span>
+                <input type="integer" name="amount" id="amount">
             </div>
             <div class="budget-section--input">
-                <span>Medication</span>
-                <input type="text" name="healthMedication">
+                <span>Category</span>
+                <input type="text" name="category" id="category_name">
             </div>
             <div class="budget-section--input">
-                <span>Other Expenses</span>
-                <input type="text" name="otherExpenses">
+                <span>Description</span>
+                <input type="text" name="dexcription" id="description">
             </div>
         </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
     </div>
+    {{!--
     <div class="budget-section" id="budget--education">
         <h3>
             <div>Education</div><button>+</button>
@@ -127,16 +132,16 @@
                 <input type="text" name="otherExpenses">
             </div>
         </div>
-    </div>
+    </div> --}}
 </form>
 
-<div class="second-section">
+{{!-- <div class="second-section">
     <div class="row1">
         <div><button>Clear Fields</button></div>
         <div><button id="calcBtn">Calculate Results</button></div>
     </div>
     <div class="row2">
-       
+
         <div class="container-col">
             <div class="mini-Row">
                 <div>
@@ -180,7 +185,8 @@
             </div>
             <div class="mini-Row">
                 <div>
-                    <span id="percentageText">0%</span> &nbsp; <span class="color-block-blue"></span> Miscellaneous Expenses
+                    <span id="percentageText">0%</span> &nbsp; <span class="color-block-blue"></span> Miscellaneous
+                    Expenses
                 </div>
                 <div>
                     <span id="money-value">$0</span>
@@ -191,7 +197,7 @@
 </div>
 <div class="third-section">
     <div class="row2">
-       
+
         <div class="container-col">
             <div class="mini-Row">
                 <div>
@@ -220,5 +226,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <script src="/js/home.js"></script>
