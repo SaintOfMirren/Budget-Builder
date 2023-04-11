@@ -7,13 +7,13 @@ router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
 
 // Routing
-router.get('/', (req, res) => {
-    res.render('index');
-});
+// router.get('/', (req, res) => {
+//     res.render('index');
+// });
 
-router.get('/about', (req, res) => {
-    res.render('about');
-});
+// router.get('/about', (req, res) => {
+//     res.render('about');
+// });
 
 router.get('/home', (req, res) => {
     res.render('homepage');

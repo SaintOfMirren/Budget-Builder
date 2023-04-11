@@ -8,11 +8,12 @@ const expenseFormHandler = async (event) => {
     const amount = document.querySelector('#amount').value.trim();
     const category = document.querySelector('#category').value.trim();
     const description = document.querySelector('#description').value.trim();
+    console.log(amount, category, description);
   
-    if (amount && category && description) {
-      const response = await fetch('/api/expenseRoutes', {
+    if (amount && category) {
+      const response = await fetch('/api/expense', {
         method: 'POST',
-        body: JSON.stringify({ amount, category, description }),
+        body: JSON.stringify({ amount, category_name:category }),
         headers: { 'Content-Type': 'application/json' },
       });
   
