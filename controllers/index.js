@@ -7,9 +7,10 @@ router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
 
 // Routing
-// router.get('/', (req, res) => {
-//     res.render('index');
-// });
+
+router.get('/', (req, res) => {
+    res.render('homepage');
+});
 
 // router.get('/about', (req, res) => {
 //     res.render('about');
@@ -21,6 +22,10 @@ router.get('/home', (req, res) => {
 
 router.get('/login', (req, res) => {
     res.render('login');
+});
+
+router.get('/expense', (req, res) => {
+    res.render('expense');
 });
 
 module.exports = router;

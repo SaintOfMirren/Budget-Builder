@@ -1,0 +1,27 @@
+<h2>Expenses Pie Chart</h2>
+<canvas id="myChart"></canvas>
+
+<script type="text/javascript">
+  const data = {
+    labels: {{ labels }},
+    datasets: [{
+      label: {{label}},
+      data: {{ values }},
+      backgroundColor: {{ colors }},
+      hoverOffset: {{ hoverOffset }}
+    }]
+  };
+
+  const config = {
+    type: 'pie',
+    data: data,
+    options: {
+      responsive: {{responsive}},
+      maintainAspectRatio: {{maintainAspectRatio}}
+    },
+  };
+
+  var myChart = new Chart(document.getElementById('myChart'), config);
+</script>
+
+<script src="/js/chart.js"></script>
