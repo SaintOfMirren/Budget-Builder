@@ -145,3 +145,13 @@ header {
   width: 20px;
   height: 10px;
 }
+
+.third-section{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  border: 1px solid black;
+  align-items: flex-end;
+}

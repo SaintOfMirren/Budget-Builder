@@ -132,8 +132,7 @@
 <div class="second-section">
     <div class="row1">
         <div><button>Clear Fields</button></div>
-        <div><button>Print</button></div>
-        <div><button>Calculate Results</button></div>
+        <div><button id="calcBtn">Calculate Results</button></div>
     </div>
     <div class="row2">
        
@@ -190,10 +189,35 @@
     </div>
 </div>
 <div class="third-section">
-    <div class="container-col">
-        <div class="montly-expenses"> Monthly Expenses</div>
-        <div class="monthly-income"> Monthly Income</div>
-        <div class="Remainder"> Remainder</div>
+    <div class="row2">
+       
+        <div class="container-col">
+            <div class="mini-Row">
+                <div>
+                    <span> Total Monthly Expenses
+                </div>
+                <div>
+                    <span id="money-valueExpenses">$0</span>
+                </div>
+            </div>
+            <div class="mini-Row">
+                <div>
+                    <span> Total Monthly Income
+                </div>
+                <div class="amount_container">
+                    <span id="money-value">$0</span>
+                    <span id="amount_earned"></span>
+                </div>
+            </div>
+            <div class="mini-Row">
+                <div>
+                    <span> Remainder
+                </div>
+                <div>
+                    <span id="money-valueRemainder">$0</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <script src="/js/home.js"></script>

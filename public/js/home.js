@@ -24,3 +24,21 @@
 //     //     incomeOther: 21342.54
 //     // }
 // })
+
+let form = document.getElementById('budget')
+let btn = document.getElementById('calcBtn')
+let incomeElement = document.getElementById('money-valueIncome')
+let expensesElement = document.getElementById('money-valueExpenses')
+let balanceElement = document.getElementById('money-valueRemainder')
+
+btn.addEventListener('click', e => {
+	e.preventDefault()
+  let data = Object.fromEntries(new FormData(form))
+  
+  let totalExpenses = parseInt(data.food) + parseInt(data.income) + parseInt(data.transport)
+  let balance = parseInt(data.income) - totalExpenses
+  
+  incomeElement.innerText = data.income
+  expensesElement.innerText = totalExpenses
+  balanceElement.innerText = balance
+})
