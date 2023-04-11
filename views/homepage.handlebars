@@ -1,5 +1,6 @@
 <!-- Loop over each object in the projects array -->
 {{!-- {{#each users as |user| }} --}}
+{{!-- // action="/submitBudget" method="POST" --}}
 <form action="/submitBudget" method="POST" id="budget">
     <div class="budget-section" id="budget--income">
         <h3>
@@ -205,7 +206,7 @@
                     <span> Total Monthly Income
                 </div>
                 <div class="amount_container">
-                    <span id="money-value">$0</span>
+                    <span id="money-valueIncome">$0</span>
                     <span id="amount_earned"></span>
                 </div>
             </div>
