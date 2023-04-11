@@ -2,7 +2,9 @@
 {{!-- {{#each users as |user| }} --}}
 <form action="/submitBudget" method="POST" id="budget">
     <div class="budget-section" id="budget--income">
-        <h3><div>Income</div><button>+</button></h3>
+        <h3>
+            <div>Income</div><button>+</button>
+        </h3>
         <div class="budget-section--content hidden">
             <div class="budget-section--input">
                 <span>Main income</span>
@@ -15,7 +17,9 @@
         </div>
     </div>
     <div class="budget-section" id="budget--household">
-        <h3><div>Household</div><button>+</button></h3>
+        <h3>
+            <div>Household</div><button>+</button>
+        </h3>
         <div class="budget-section--content hidden">
             <div class="budget-section--input">
                 <span>Food</span>
@@ -44,7 +48,9 @@
         </div>
     </div>
     <div class="budget-section" id="budget--health">
-        <h3><div>Health</div><button>+</button></h3>
+        <h3>
+            <div>Health</div><button>+</button>
+        </h3>
         <div class="budget-section--content hidden">
             <div class="budget-section--input">
                 <span>Health Insurance</span>
@@ -61,7 +67,9 @@
         </div>
     </div>
     <div class="budget-section" id="budget--education">
-        <h3><div>Education</div><button>+</button></h3>
+        <h3>
+            <div>Education</div><button>+</button>
+        </h3>
         <div class="budget-section--content hidden">
             <div class="budget-section--input">
                 <span>Tuition and Fees</span>
@@ -78,7 +86,9 @@
         </div>
     </div>
     <div class="budget-section" id="budget--savings">
-        <h3><div>Savings and Giving</div><button>+</button></h3>
+        <h3>
+            <div>Savings and Giving</div><button>+</button>
+        </h3>
         <div class="budget-section--content hidden">
             <div class="budget-section--input">
                 <span>My Savings</span>
@@ -87,7 +97,9 @@
         </div>
     </div>
     <div class="budget-section" id="budget--miscellaneous">
-        <h3><div>Miscellaneous Expenses</div><button>+</button></h3>
+        <h3>
+            <div>Miscellaneous Expenses</div><button>+</button>
+        </h3>
         <div class="budget-section--content hidden">
             <div class="budget-section--input">
                 <span>Entertainment</span>
@@ -117,17 +129,95 @@
     </div>
 </form>
 
-<script>
-
-    const plusBtns = document.querySelectorAll('.budget-section h3 button')
-    const sectionContentElements = document.querySelectorAll('.budget-section--content')
-
-    plusBtns.forEach((btn, btnIndex) => {
-        btn.addEventListener('click', e => {
-            e.preventDefault()
-            sectionContentElements[btnIndex].classList.toggle('hidden')
-        })
-    })
-
-</script>
-{{!-- {{/each}} --}}
+<div class="second-section">
+    <div class="row1">
+        <div><button>Clear Fields</button></div>
+        <div><button id="calcBtn">Calculate Results</button></div>
+    </div>
+    <div class="row2">
+       
+        <div class="container-col">
+            <div class="mini-Row">
+                <div>
+                    <span id="percentageText">0%</span> &nbsp; <span class="color-block-blue"></span> Housing and Living
+                </div>
+                <div>
+                    <span id="money-value">$0</span>
+                </div>
+            </div>
+            <div class="mini-Row">
+                <div>
+                    <span id="percentageText">0%</span> &nbsp; <span class="color-block-blue"></span> Housing and Living
+                </div>
+                <div>
+                    <span id="money-value">$0</span>
+                </div>
+            </div>
+            <div class="mini-Row">
+                <div>
+                    <span id="percentageText">0%</span> &nbsp; <span class="color-block-blue"></span> Health
+                </div>
+                <div>
+                    <span id="money-value">$0</span>
+                </div>
+            </div>
+            <div class="mini-Row">
+                <div>
+                    <span id="percentageText">0%</span> &nbsp; <span class="color-block-blue"></span> Education
+                </div>
+                <div>
+                    <span id="money-value">$0</span>
+                </div>
+            </div>
+            <div class="mini-Row">
+                <div>
+                    <span id="percentageText">0%</span> &nbsp; <span class="color-block-blue"></span> Savings and Giving
+                </div>
+                <div>
+                    <span id="money-value">$0</span>
+                </div>
+            </div>
+            <div class="mini-Row">
+                <div>
+                    <span id="percentageText">0%</span> &nbsp; <span class="color-block-blue"></span> Miscellaneous Expenses
+                </div>
+                <div>
+                    <span id="money-value">$0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="third-section">
+    <div class="row2">
+       
+        <div class="container-col">
+            <div class="mini-Row">
+                <div>
+                    <span> Total Monthly Expenses
+                </div>
+                <div>
+                    <span id="money-valueExpenses">$0</span>
+                </div>
+            </div>
+            <div class="mini-Row">
+                <div>
+                    <span> Total Monthly Income
+                </div>
+                <div class="amount_container">
+                    <span id="money-value">$0</span>
+                    <span id="amount_earned"></span>
+                </div>
+            </div>
+            <div class="mini-Row">
+                <div>
+                    <span> Remainder
+                </div>
+                <div>
+                    <span id="money-valueRemainder">$0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/home.js"></script>
