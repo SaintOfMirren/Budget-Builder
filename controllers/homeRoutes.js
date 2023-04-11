@@ -44,19 +44,14 @@ router.get('/login', (req, res) => {
 
 // Expense API Endpoint
 router.get('/expense', withAuth, async (req, res) => {
-  console.log("Hit backend expense endpoint");
   try {
-    // Find the logged in user based on the session ID but exclude the password field
+    // // Find the logged in user based on the session ID but exclude the password field
+    res.render('expense');
     const expenseData = await Expense.findAll({
       where: {user_id: req.session.user_id}
     });
 
-    const expense = expenseData.get({ plain: true });
-    console.log(expense);
-    res.render('homepage', {
-      ...expense,
-      logged_in: true
-    });
+    // Send Expense Data to Pie Chart
   } catch (err) {
     res.status(500).json(err);
   }
