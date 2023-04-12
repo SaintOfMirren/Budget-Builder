@@ -4,6 +4,7 @@
 
 const expenseFormHandler = async (event) => {
     event.preventDefault();
+    console.log(amount);
   
     const amount = document.querySelector('#amount').value.trim();
     const category = document.querySelector('#category').value.trim();
@@ -11,9 +12,9 @@ const expenseFormHandler = async (event) => {
     console.log(amount, category, description);
   
     if (amount && category) {
-      const response = await fetch('/api/expense', {
+      const response = await fetch(`/api/expense`, {
         method: 'POST',
-        body: JSON.stringify({ amount, category_name:category }),
+        body: JSON.stringify({ amount, category }),
         headers: { 'Content-Type': 'application/json' },
       });
   
