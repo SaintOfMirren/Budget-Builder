@@ -3,7 +3,6 @@ const { Expense } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
-  console.log("test log" + req.body)
     try {
         const newExpense = await Expense.create({
             ...req.body,
