@@ -18,6 +18,7 @@ const expenseFormHandler = async (event) => {
       });
   
       if (response.ok) {
+        console.log(amount);
         document.location.replace('/expense');
       } else {
         alert(response.statusText);
