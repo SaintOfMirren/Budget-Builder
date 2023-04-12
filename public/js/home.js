@@ -4,7 +4,6 @@
 
 const expenseFormHandler = async (event) => {
     event.preventDefault();
-    console.log(amount);
   
     const amount = document.querySelector('#amount').value.trim();
     const category = document.querySelector('#category').value.trim();
@@ -66,5 +65,5 @@ let balanceElement = document.getElementById('money-valueRemainder')
 // })
 
 document
-  .querySelector('.budget-section')
+  .querySelector('#budget')
   .addEventListener('submit', expenseFormHandler);
