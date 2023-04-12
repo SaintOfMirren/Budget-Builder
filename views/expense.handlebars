@@ -1,34 +1,18 @@
-<script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
 <h2>Expenses Pie Chart</h2>
-<canvas id="myChart"></canvas>
 
-<div id="chart-container">
+<div class="d-flex justify-content-center align-items-center">
+  <div id="chart-container"></div>
 
-
-
-<script type="text/javascript">
-  const data = {
-    labels: {{ labels }}
-    datasets: [{
-      label: {{label}},
-      data: {{ values }},
-      backgroundColor: {{ colors }},
-      hoverOffset: {{ hoverOffset }}
-    }]
-  };
-
-  const config = {
-    type: 'pie',
-    data: data,
-    options: {
-      responsive: {{responsive}},
-      maintainAspectRatio: {{maintainAspectRatio}}
-    },
-  };
-
-  var myChart = new Chart(document.getElementById('myChart'), config);
-</script>
-
+  <div>
+    <h1>List of Expenses</h1>
+    <ul>
+      {{#each Expenses as |Expense|}}
+      <li>{{Expense.category}} - {{Expense.amount}} - {{format_date Expense.date}}</li>
+      {{/each}}
+    </ul>
+  </div>
 </div>
+
 <script src="/js/chart.js"></script>
