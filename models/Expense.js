@@ -19,6 +19,10 @@ Expense.init(
             type: DataTypes.DECIMAL(10, 2),
             allowNull: false,
         },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         date: {
             type: DataTypes.DATE,
             allowNull: false,
