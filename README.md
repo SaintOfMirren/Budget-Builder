@@ -13,7 +13,7 @@ To learn more about Chart.js visit: https://www.chartjs.org/
 
 ## Application Links
 
-Deployed Heroku Application: 
+Deployed Heroku Application: https://countzachula.herokuapp.com/
 
 GitHub Repo: https://github.com/SaintOfMirren/Budget-Builder
 
@@ -25,3 +25,8 @@ GitHub Repo: https://github.com/SaintOfMirren/Budget-Builder
 
 ## Future Development
 
+-Improve responsiveness
+-Add income vs expense tracking bar
+-Create drop down menus for choosing categories
+-Add clear and delete buttons for each entry
+-Add the ability to filter or sort by date or category
