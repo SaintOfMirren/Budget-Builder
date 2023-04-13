@@ -165,3 +165,43 @@ header {
 .bodyContainer {
   min-height: 100vh;
 }
+
+ /* Styling for different screen sizes */
+@media (max-width: 576px) {
+  .home__title {
+    font-size: 1.5rem;
+  }
+  
+  .justify-space-around {
+    justify-content: space-evenly;
+  }
+  
+  .p-2 {
+    padding: 0.5rem;
+  }
+  
+  .mt-5 {
+    margin-top: 1.5rem;
+  }
+  
+  .bodyContainer {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home__title {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .home__title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .home__title {
+    font-size: 3rem;
+  }
+}
