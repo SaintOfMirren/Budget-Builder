@@ -8,8 +8,8 @@
   <div>
     <h1>List of Expenses</h1>
     <ul>
-      {{#each Expense as |Expense|}}
-      <li>{{Expense.category}} - {{Expense.amount}} - {{format_date Expense.date}}</li>
+      {{#each Expenses as |Expense|}}
+      <li>{{expense.category}} - {{expense.amount}} - {{format_date expense.date}}</li>
       {{/each}}
     </ul>
   </div>
